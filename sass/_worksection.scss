@@ -1,0 +1,85 @@
+// Masonry Layout
+.work {
+	padding-top: 3em;
+	@media (min-width: $breakpointTablet){
+		h2{
+			font-size: 2.2em;
+		}
+	}
+}
+
+.grid {
+	padding-bottom: 2em;
+}
+
+.gutter-sizer {
+	width: 1%;
+}
+
+.grid-sizer,
+.grid-item {
+	width: 100%;
+	@media (min-width: $breakpointTablet){
+		width: calc(50% - 0.5%);
+	}
+}
+
+.grid-item {
+	overflow: hidden;
+	position: relative;
+	margin-bottom: 0.5em;
+
+	@media (min-width: $breakpointTablet){
+		margin-bottom: 1%;
+	}
+
+	img {	
+		display: block;
+		opacity: 1;
+		transform: scale(1);
+		transition: all 0.5s ease;
+	}
+
+	p {
+		margin: 0.6em auto 0.6em;
+	}
+
+	.text-overlay {
+		z-index: 500;
+		width: 80%;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+		color: white;
+		text-align: center;
+		transition: all 0.5s ease;
+		opacity: 0;
+	}
+
+	.thumbnail-overlay{
+		background: $tertiaryColor-dark;
+		backface-visibility: hidden;
+	}
+
+	&:hover,
+	&:focus {
+		img {
+			transform: scale(1.1);
+			opacity: 0.2;
+		}
+
+		.text-overlay {
+			opacity: 1;
+		}
+
+		a {
+			font-style: normal;
+		}
+	}
+}
+
+
+
+
+

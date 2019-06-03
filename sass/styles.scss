@@ -1,0 +1,394 @@
+@charset "utf-8";
+
+@import "resets";
+@import "variables";
+@import "navigation";
+@import "projectpage";
+
+
+/* Accessibility
+--------------------------------------------------------- */
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+.screen-reader-text:hover,
+.screen-reader-text:active,
+.screen-reader-text:focus {
+	background-color: white;
+	clip: auto !important;
+	color: black;
+	display: block;
+	font-size: 14px;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000; 
+}
+
+// Show focus outline when tabbing, not on click
+body:not(.show-focus-outlines) button:focus, 
+body:not(.show-focus-outlines) a:focus, 
+body:not(.show-focus-outlines) [tabindex]:focus {
+  outline: none;
+}
+
+
+/* General
+--------------------------------------------------------- */
+::selection {
+    background: $secondaryColor-light;
+}
+
+*:focus {
+	outline: 0.1em dotted $tertiaryColor;
+}
+
+// clearfix
+.clear:after { 
+	display: table; 
+	content: ''; 
+	clear: both; 
+}
+
+
+body {
+	// max-width: 1920px;
+	// margin: 0 auto;
+	overflow-x: hidden;
+	color: $mainColor;
+}
+
+h1,h2 {
+	font: {
+		family: $headFont;
+		weight: 500;
+	}
+	line-height: 1.4;
+	text-align: center;
+}
+
+h1 {
+	font-size: 2.4em;
+	margin: 1.6rem auto 0;
+}
+
+h2 {
+	font-size: 1.6em;
+	margin: 1rem auto 1rem;
+}
+
+h3 {
+	margin: 0 auto;
+}
+
+p {
+	margin: 1.5em auto 1.5em;
+	font: {
+		family: $bodyFont;
+		weight: 300;
+		size: 15px;
+	}
+}
+
+a {
+	text-decoration: none;
+	cursor: pointer;
+	color:$tertiaryColor-dark;
+	font-family: $bodyFont;
+}
+
+main {
+	max-width: 1920px;
+	margin: 0 auto;
+	h1,h2,h3,p {
+		max-width: 1000px;
+	}
+	p{
+		line-height: 1.6;
+	}
+	img {
+		display: block;
+		margin: 0 auto;
+	}
+}
+
+.centered {
+	margin: 0 auto;
+	padding-left: 1em;
+	padding-right: 1em;
+
+	@media (min-width: 768px) {
+		padding-left: 4%;
+		padding-right: 4%;
+	}
+}
+
+// Page transitions (fade in)
+.animate-in {
+    animation: fadeIn .7s ease-in;
+}
+.animate-out {
+    transition: opacity .7s;
+    opacity: 0;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+
+
+/* Header Section
+--------------------------------------------------------- */
+header {
+	max-width: 1920px;
+	margin: 0 auto;
+	height: 300px;
+	transition: height 0.3s ease;
+	@media (min-width: 450px){
+		height: 380px;
+    }
+	@media (min-width: 530px){
+		height: 430px;
+	}
+}
+.parallax {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    height: 600px;
+    overflow: hidden;   
+}
+.confetti {
+    position: absolute;
+    width: 180%;
+    height: 600px;
+    left:0;
+    background-position: top center;
+    background-repeat: repeat-x;
+    transition: width 0.3s ease-in-out;
+    @media (min-width: 480px){
+		width: 180%;
+    }
+	@media (min-width: $breakpointMobile){
+		width: 130%;
+	}
+	@media (min-width: 850px){
+		width: 100%;
+	}
+}
+.confetti-blue {
+    background-image: url('../images/confetti-blue.svg');
+}
+.confetti-green {
+    background-image: url('../images/confetti-green.svg');
+}
+.confetti-purple {
+    background-image: url('../images/confetti-purple.svg');
+}
+
+@keyframes floating {
+	0% {
+		transform: translatey(0);
+	}
+	50% {
+		transform: translatey(-20px);
+	}
+	100% {
+		transform: translatey(0);
+	}
+}
+
+.balloon {
+	width: 100%;
+	transform: translatey(0);
+	animation: floating 3.5s ease-in-out infinite;
+	img {
+		width: 50%;
+		max-width: 280px;
+		display: block;
+		margin: 5em auto 0;
+	}
+
+}
+
+
+
+/* Intro Section
+--------------------------------------------------------- */
+.intro {
+	padding-top: 5em;
+	p {
+		max-width: 1000px;
+	}
+	.fa-magic {
+		font-size: 0.7em;		
+	}
+	.fa-magic,
+	.fa-code {
+		padding-left: 3px; 
+	}
+	@media (min-width: $breakpointTablet){
+		h1{
+			font-size: 3.5em;
+		}
+	}
+}
+
+.highlight {
+	position: relative;
+}
+.highlight:after {
+	content: "";
+	display: block;
+	position: absolute;
+	bottom: -4px;
+	left: 6px;
+	height: 18px;
+	width: 90%;
+	background: $secondaryColor-lightest;
+	z-index: -10;
+}
+
+.no-break {
+	white-space:nowrap;
+	display: inline;
+}
+
+.read-more {
+	font: {
+		weight: 400;
+	}
+	border-bottom: 2px solid $tertiaryColor;
+	&:hover,
+	&:focus {
+		font-style: italic;
+	}
+}
+
+
+/* About Me Section
+--------------------------------------------------------- */
+.about-page footer{
+	margin-top: 8em !important;
+}
+
+.about-header {
+	margin-bottom: 3em;
+	.title-underline:after {
+		width: 3em;
+	}
+}
+
+.about-me {
+	p {
+		max-width: 800px;
+		line-height: 1.6;
+	}
+}
+
+.underline {
+	position: relative;
+}
+.underline:after {
+	content: "";
+	display: block;
+	position: absolute;
+	bottom: -4px;
+	left: 0;
+	height: 6px;
+	width: 100%;
+	background: $secondaryColor-lightest;
+	z-index: -10;
+}
+
+
+/* Latest Works Section
+--------------------------------------------------------- */
+@import "worksection";
+
+
+// Scroll to Top Button
+.scroll-to-top {
+	display: none;
+	position: fixed;
+	bottom: 6%;
+	right: 5%;
+	z-index: 999;
+	svg {
+		width: 4em;
+		circle{
+			transition: fill 200ms ease-in-out;
+			fill: rgba(255,255,255,0.4);
+			stroke: none;
+		}
+		&:hover{
+			circle{
+				fill: rgba(0,0,0,0.8);
+				fill: rgba($secondaryColor,0.7);
+			}
+		}
+	} //end svg
+}
+
+
+/* Footer/Contact Section
+--------------------------------------------------------- */
+.contact {
+	margin: 2em 1.2em 0;
+	padding-top: 1.5em;
+	padding-bottom: 2.5em;
+	border-top: 1px solid $mainColor-light;
+	text-align: center;
+	@media (min-width: $breakpointTablet){
+		margin: 3em 4% 0;
+	}
+
+	.email {
+		padding: 0 0 2em;
+		margin: 0 auto;
+		font-weight: 300;
+		word-wrap: break-word;
+
+		a {
+			letter-spacing: 1px;
+			&:hover,
+			&:focus {
+				border-bottom: 2px solid $tertiaryColor;
+				font-style: italic;
+			}
+		}
+	}
+	
+	.social a{
+		margin-right: 8px;
+		display: inline-block;
+		transition: all 160ms ease-in-out;
+		transform: translatey(0);
+
+		&:hover,
+		&:focus {
+			transition: all 160ms ease-in-out;
+			transform: translatey(-4px);
+		}
+	}
+	.copyright{
+		color: lightgrey;
+	}
+}
+
+
+
+
+

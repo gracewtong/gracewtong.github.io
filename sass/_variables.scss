@@ -1,0 +1,30 @@
+// VARIABLES
+
+
+// Colors
+// -> dark grey shades
+$mainColor: #292929;
+$mainColor-light: lighten($mainColor, 20);
+
+// -> aquamarine shades
+$secondaryColor: rgb(146, 255, 229);
+$secondaryColor-light: lighten($secondaryColor, 6);
+$secondaryColor-lightest: lighten($secondaryColor, 10);
+$secondaryColor-dark: darken($secondaryColor, 20);
+
+// -> blurple shades
+$tertiaryColor: rgb(123, 104, 238);
+$tertiaryColor-light: lighten($tertiaryColor, 5);
+$tertiaryColor-dark: darken($tertiaryColor, 10);
+
+
+// Typography
+$navFont: Work Sans, sans-serif;
+$headFont: Work Sans, sans-serif;
+$bodyFont: Roboto Mono, sans-serif;
+
+
+// Breakpoints
+$breakpointMobile: 600px;
+$breakpointTablet: 768px;
+

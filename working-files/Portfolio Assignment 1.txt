@@ -1,0 +1,91 @@
+Portfolio Assignment 1
+
+-----------------------------------------------------
+Current plan for employment after grad:
+- junior front end web developer
+- web & graphic designer
+- web designer/developer internship?
+- will be looking for employment, with some possible small freelancing projects on the side
+- don't mind related jobs like marketing assistant, graphic designer, multimedia designer, etc.
+
+
+Tech Companies/ Agencies
+
+Hootsuite
+- company culture
+
+Mobify? ui = front end
+
+Huemor (not local- NY)
+- currently has design & developer internships open right now
+- prefer local opportunities but open to travel
+
+
+Companies w/ In-House Positions
+Aritzia
+- has employed twd students in the past 
+
+******************
+information interview: gathering info
+- check out copanies working in that field i.e. see employees on linkedin and email them/ connect with them
+	- ask would like to know more about the field
+	- what is your task? what software? position names? how do you split the tasks?
+
+- meetups
+- volunteer for ladies learning code?
+- typography meetup, etc. 
+
+know 3 things about each thing
+bcit ejobs
+will NEED javascript - review this!!
+
+-----------------------------------------------------
+List potential portfolio pieces:
+
+Definite:
+- city project
+- responsive project
+- javascript project 1 (game) - maybe?? not high priority
+- javascript project 2 (tutorial) - high priority & give context (not responsive)
+- client project
+- group project? code - what to improve - mobile first, accessible
+
+- describe what was in scope - i.e. not responsive, information architecture
+
+minimum 2 projects needed*
+
+
+Maybes:
+- landing page???
+- php form & database projects??? - shows basic php, its ok
+- business brochure project???
+
+
+steps:
+- list of projects
+- hierarchy- web or web and graphic
+- wireframing
+
+make plan to connect to ppl 
+
+what do the graphic design pieces tell about you?
+
+
+-----------------------------------------------------
+Example portfolio websites I like:
+
+http://www.mmason.ca/
+http://www.theworkshop.ch/en/
+
+http://dinehq.com/
+
+http://www.artifactproperty.co.nz/#projects
+http://studieau.co/
+
+
+
+
+
+First portfolio status meeting w/ Beata: Thursday May 11 3pm
+
+
