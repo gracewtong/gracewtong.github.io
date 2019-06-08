@@ -23,10 +23,11 @@
 	</script>
 </head>
 
-<body class="animate-in">
+<body class="project-page animate-in">
 	<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
 	
-	<header>
+	<header class="project-header dark-header">
+		<!-- NAV -->
 		<div class="nav-wrapper centered clear">
 
 			<a href="https://gracetongdesign.com/" class="logo">
@@ -49,118 +50,63 @@
 			
 			<nav class="main-nav" id="mainNav" role="navigation">
 				<ul>
-					<li><a href="#work" class="nav-underline">work</a></li>
+					<li><a href="https://gracetongdesign.com/#work" class="nav-underline">work</a></li>
 					<li><a href="about" class="nav-underline">about</a></li>
 					<li><a href="#contact" class="nav-underline">contact</a></li>
 				</ul>
 			</nav>
 		</div>
+		<!-- END NAV -->
 
-		<div class="parallax" aria-hidden="true">
-		    <div class="confetti confetti-purple"></div>
-		    <div class="confetti confetti-green"></div>
-		    <div class="confetti confetti-blue"></div>
-		    <div class="balloon">
-		    	<img src="images/balloon-grace.svg" alt="">
-		    </div>		    
+		<div class="project-header-img">
+		<h1 class="title-underline">Portfolio Site</h1>
+			<picture class="header-img">
+				<source media="(min-width: 1020px)" 
+						srcset="images/project-portfolio/portfolio-project-header-wide.svg">
+				<source media="(min-width: 650px)" 
+						srcset="images/project-portfolio/portfolio-project-header.svg">
+				<img src="images/project-portfolio/portfolio-project-header-crop.svg" alt="">
+			</picture>
 		</div>
 	</header>
 
-	<main id="content" role="main">
+	<main id="content" role="main" class="main-portfolio-project">
 
-		<!-- Intro/ About Section -->
-		<section class="intro centered" id="intro">
-			<h1>Hello! I'm Grace</h1>
+		<section class="project-overview centered" id="overview">
 			<h2>
-				I'm a Front-End Web <span class="highlight no-break">Developer<i class="fa fa-code" aria-hidden="true"></i></span> & <span class="highlight no-break">Designer<i class="fa fa-magic" aria-hidden="true"></i></span> from <span class="no-break">Vancouver, B.C.</span>
+				A responsive portfolio website for my web design and<span class="no-break"> development work.</span> 
 			</h2>
-			<p>I love building clean and vibrant websites that are engaging and functional. As a multi-disciplinary designer and developer, I am passionate about crafting joyful digital experiences that are human-centered. <a class="no-break read-more" href="about">Read more <span class="screen-reader-text">about Grace's background</span></a></p>
+			<h3 class="tools">
+				HTML | SASS | JQUERY | PHP | GITHUB | ILLUSTRATOR | GULP
+			</h3>
+			<p>For my portfolio website, I wanted to reflect my personal design style while presenting my work in a clear, logical manner. I designed the site <span class="underline">mobile first</span> and gradually added style and functionality to larger screens. <span class="underline">Gulp</span> was used to automate tasks such as adding prefixes and minifying files. You can check out the code for this website on my github (linked below).</p>
+
+			<a href="https://github.com/gracegracetong/Portfolio-Site" class="view-live git">view on github</a>
 		</section>
 
-		<!-- Latest Works Section -->
-		<section class="work centered" id="work">
-			<h2>Latest Projects</h2>
-			<div class="project-thumbnails grid">
-				<div class="gutter-sizer"></div>
-
-				<div class="grid-item">
-					<a href="yaletown">
-						<div class="thumbnail-overlay">
-							<div class="text-overlay">
-								<h3>Yaletown Dog Training</h3>
-								<p>Client Project for Small Business</p>
-							</div>
-							<img src="dist/images/yaletown-dog-training-880x512.jpg" alt="Link to Project Page for Yaletown Dog Training Client Website">
-						</div>
-					</a>
-				</div>
-
-				<div class="grid-item grid-sizer">
-					<a href="mason">
-						<div class="thumbnail-overlay">
-							<div class="text-overlay">
-								<h3>Mason Architects</h3>
-								<p>Responsive Site Design & Development</p>
-							</div>						
-							<img src="dist/images/responsive-architecture-880x512.jpg" alt="Link to Project Page for Responsive Architecture Site">
-						</div>
-					</a>
-				</div>
-
-				<div class="grid-item">
-					<a href="plant-tutorials">
-						<div class="thumbnail-overlay">
-							<div class="text-overlay">
-								<h3>Plant Tutorials</h3>
-								<p>Javascript & JQuery</p>
-							</div>	
-							<img src="dist/images/javascript-tutorial-880x512.png" alt="Link to Project Page for Javascript Tutorial Site">
-						</div>
-					</a>
-				</div>
-				
-				<div class="grid-item">
-					<a href="portfolio-project">
-						<div class="thumbnail-overlay">
-							<div class="text-overlay">
-								<h3>Personal Portfolio</h3>
-								<p>Site Design & Development</p>
-							</div>
-							<img src="dist/images/portfolio-880x512.jpg" alt="Link to Project Page for Personal Portfolio">
-						</div>
-					</a>
-				</div>
-				
-				<div class="grid-item">
-					<a href="machu-picchu">
-						<div class="thumbnail-overlay">
-							<div class="text-overlay">
-								<h3>Travel Machu Picchu</h3>
-								<p>Parallax & Animation</p>
-							</div>
-							<img src="dist/images/machu-picchu-project-880x512.jpg" alt="Link to Project Page for Macchu Picchu Parallax Scrolling Site">
-						</div>
-					</a>
-				</div>
-				
-
-				<div class="grid-item">
-					<a href="compass-ux">
-						<div class="thumbnail-overlay">
-							<div class="text-overlay">
-								<h3>Compass Redesign: Mobile Reloading</h3>
-								<p>UX Design & Prototyping</p>
-							</div>
-							<img src="dist/images/compass-ux-redesign-880x512.png" alt="Link to Project Page for Compass Mobile Reloading UX Design Project">
-						</div>
-					</a>
-				</div>
-								
+		<section class="project-styles">
+			<h2>Color Palette</h2>
+			<div class="color-palette"> 	
+				<div class="tertiary-color-2 color"><p>#533AE9</p></div>	
+				<div class="main-color color"><p>#92FFE5</p></div>
+				<div class="secondary-color color"><p>#7B68EE</p></div>	
+				<div class="tertiary-color color"><p>#292929</p></div>	
 			</div>
 
+			<h2>Style Tile</h2>
+			<div class="style-tile">
+				<img src="images/project-portfolio/styletile-portfolio.png" alt="Portfolio Project Style Tile">
+			</div>	
+		</section>		
+
+		<section class="responsive-layouts">
+			<h2>Mobile & Tablet</h2>
+			<img src="images/project-portfolio/portfolio-responsive-devices-2.jpg" alt="Tablet and Mobile View of the Website Design">
+			
+			<a href="https://gracetongdesign.com/#work" class="view-live view-more">view more projects</a>
 		</section>
 
-	
+
 <!-- Scroll to Top -->
 <a href="javascript:" class="scroll-to-top" id="top" aria-hidden="true">
 	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 105 105"><title>arrow-top</title><g id="2571c954-cd39-4e0b-848f-7c609354301c" data-name="Layer 2"><g id="025c20be-3612-4f8d-9544-558bd6a12832" data-name="Layer 1"><circle cx="52.5" cy="52.5" r="51" fill="none" stroke="#59545e" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/><polyline points="70.93 49.62 52.5 29.1 34.07 49.62" fill="none" stroke="#59545e" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.83" fill-rule="evenodd"/><line x1="52.4" y1="29.1" x2="52.4" y2="75.9" fill="none" stroke="#59545e" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.83"/></g></g></svg>
