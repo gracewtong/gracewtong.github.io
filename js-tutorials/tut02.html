@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Javascript Plant Tutorials</title>
+	<link rel="stylesheet" href="styles/styles.css">
+	<link rel="stylesheet" href="styles/prism.css">
+	<link href="https://fonts.googleapis.com/css?family=Work+Sans:200,300,500" rel="stylesheet">
+	<link rel="icon" href="favicon.ico"/>
+
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-93770255-1', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+</head>
+
+<body>
+
+<header>
+	<nav class="main-nav">
+		<a class="main-logo" href="index.html"><img src="images/nav-logo.svg" alt="logo"></a>
+		<ul>
+			<li><a href="tut01.html">Tutorial 1</a></li>
+			<li class="current"><a href="tut02.html">Tutorial 2</a></li>
+			<li><a href="tut03.html">Tutorial 3</a></li>				
+		</ul>	
+	</nav>
+</header>
+
+
+<main>
+
+	<div class="back-to-top">^</div>
+
+	<section class="tutorial-02">
+
+		<h1>Plant It!</h1>
+
+		<div class="steps">
+			<ol>
+				<li>Drag plant seeds to the pot.</li>
+				<li>Click on the watering can that appears.</li>
+				<li>Your plant is ready! Go to Tutorial 3.</li>
+			</ol>
+		</div>
+
+		<div class="pot">
+			<img src="images/pot-01.png" alt="pink pot for plants">
+			<div class="potted-plant ui-droppable"></div>
+
+			<div class="water">
+				<ul class="waterdrops">
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="drag">
+			<img src="images/drag-seeds.png" alt="plant seeds" data-drag="<img id='drag01' src='images/drop-seeds.png'/>">
+		</div>
+
+		<div class="clickable">
+			<img src="images/watering-can.png" alt="watering can" id="clickCan">
+		</div>
+
+	</section>
+
+	<section class="learnHow">
+		<h2>How it Works</h2>
+
+		<ol class="instructions">
+			<li> 
+				Insert the jQuery and jQuery UI CDNs before the closing body tag in your HTML file. 
+
+				<pre class="language-markup"><code class="language-markup">&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">&lt;/script>
+&lt;script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js">&lt;/script></code>
+			</pre>
+			</li>
+
+			<li>Add the following code to your corresponding HTML, CSS, & Javascript files. In the HTML code, make sure that the data-drag source links to the image you would like to appear after dragging.<br><br>  
+			For the Javascript, the first function uses jQuery UI draggable() and droppable() methods to make an img (or any element) draggable/droppable. The second function toggles the waterdrops on/off.
+
+			<div class="tabs">
+			    <ul class="tab-links">
+			        <li class="active"><a href="#tab1">HTML</a></li>
+			        <li><a href="#tab2">CSS</a></li>
+			        <li><a href="#tab3">JS</a></li>
+			    </ul>
+			 
+			    <div class="tab-content">
+			        <div id="tab1" class="tab active">
+
+<pre class="language-markup"><code class="language-markup"><script type="prism-html-markup">
+<div class="pot">
+	<img src="images/pot-01.png" alt="pink pot for plants">
+	<div class="potted-plant ui-droppable"></div>
+
+	<div class="water">
+		<ul class="waterdrops">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
+</div>
+
+<div class="drag">
+	<img src="images/drag-seeds.png" 
+		 alt="plant seeds" 
+		 data-drag="<img id='drag01' src='images/drop-seeds.png'/>">
+</div>
+
+<div class="clickable">
+	<img src="images/watering-can.png" alt="watering can" id="clickCan">
+</div>
+</script></code>
+</pre>	
+
+			        </div> <!-- end tab1 -->
+
+
+			        <div id="tab2" class="tab">
+
+<pre class="language-css"><code class="language-css">
+.pot {
+    width: 266px;
+    position: relative;
+    margin: 100px auto;
+}
+
+.potted-plant {
+    position: absolute;
+    top: -102px;
+    left: -19px;
+    width: 300px;
+    height: 280px;
+}
+
+.drag {
+    width: 250px;
+    height: 200px;
+    margin-top: -255px;
+    margin-left: 50px;
+}
+
+.drag img {
+    cursor: pointer;
+    display: block;
+}
+
+#drag01 {
+    position: absolute;
+    top: 73px;
+    left: 39px
+}
+
+
+@keyframes animateWater {
+	0% {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+		opacity: 0;
+	}
+	  
+	50% {
+		opacity: 0.8;
+	}
+	  
+	100% {
+		-webkit-transform: translateY(150%);
+		transform: translateY(150%);
+		opacity: 0;
+	}  
+}
+
+.clickable {
+    width: 266px;
+    position: relative;
+    top: -247px;
+    left: 70%;
+    cursor: pointer;
+}
+
+#clickCan {
+	position: absolute;
+}
+
+.water {
+	display: none;
+	position: absolute;
+	top: -160px;
+	left: 50%;
+	z-index: -10;
+}
+
+.clicked .water {
+	display: block;
+}
+
+.waterdrops li {
+	position: absolute;
+	width: 38px;
+	height: 62px;
+	background: url('../images/drop-water.png');
+	-webkit-animation: animateWater 2s ease infinite;
+	animation: animateWater 2s ease infinite;
+}
+
+.waterdrops li:nth-child(1) {
+    -webkit-animation-delay: 0.8s;
+    animation-delay: 0.8s;
+    left: -100px;
+    top: 50px;
+}
+
+.waterdrops li:nth-child(2) {
+    -webkit-animation-delay: 0.3s;
+    animation-delay: 0.3s;
+    left: -45px;
+    top: 30px;
+}
+
+.waterdrops li:nth-child(3) {
+    -webkit-animation-delay: 0.6s;
+    animation-delay: 0.6s;
+    left: 70px;
+    top: 40px;
+}
+
+.waterdrops li:nth-child(4) {
+    -webkit-animation-delay: 0.6s;
+    animation-delay: 0.6s;
+    left: -35px;
+    top: -30px;
+}
+
+.waterdrops li:nth-child(5) {
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+    left: 30px;
+    top: 5px;
+
+}
+
+</code>
+</pre>
+
+			        </div> <!-- end tab2 -->
+
+					<div id="tab3" class="tab">
+
+<pre class="language-javascript"><code class="language-javascript">
+$(function(){
+	$(".drag img").draggable();
+   	$('.potted-plant').droppable({
+    drop: function(event, ui) {
+        var droppedObject = ui.draggable.data('drag'); 
+        $(this).prepend(droppedObject);
+        ui.draggable.remove();
+    }
+    });
+});
+
+$('body').removeClass('clicked');
+
+$('#clickCan').click(function(){	
+	$('body').toggleClass('clicked');
+});
+
+</code>
+</pre>
+
+			        </div> <!-- end tab3 -->						
+
+			    </div> <!-- end tab-content -->
+			</div> <!-- end tabs -->
+
+			</li> <!-- end step 2 li item -->
+
+		</ol> <!-- end instructions -->
+	</section> <!-- end learnHow section -->
+
+
+</main>
+	
+<footer>
+	<p>&copy; 2017 Grace Tong</p>
+</footer>
+<script src="scripts/prism.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+<script src="scripts/scripts.js"></script>
+
+
+</body>
+</html>
+

@@ -1,0 +1,214 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>D E S E R T_ N I G H T</title>
+
+<link rel="stylesheet" type="text/css" href="styles/styles.css">
+<link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700|Julius+Sans+One" rel="stylesheet">
+<link rel="shortcut icon" href="favicon.ico"/>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-93770255-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+
+
+
+<body>
+
+<div class="galaxy"></div>
+
+<header>
+
+  <h1>
+  <span>Desert Night</span> A Matching Game
+  </h1>
+
+
+  <div class="output-turns">
+    <h2>Turns</h2>
+    <p>0</p>
+  </div><!-- end output-turns -->
+
+
+  <div class="menu-buttons">
+    <button onclick="location.href = 'index.html';" class="btn-home animate-btn" id="homeBtn"><i class="fa fa-home fa-2x" aria-hidden="true"></i> 
+    </button>
+
+    <button class="btn-play animate-btn">Click to Play</button>
+  </div>
+
+
+  <div class="output-matched">
+    <h2>Matches</h2>
+    <p>0</p>
+  </div>
+
+</header>
+
+
+<img class="mountain-bg" src="images/big-mountains.png">
+
+<audio id="flipSound" src="media/swoosh-cc0-shinplaster.mp3" autostart="false"></audio>
+<audio id="soundtrack" src="media/floating-cities-incompetech.mp3" autostart="false" loop></audio>
+
+
+<div class="no-game-board game-board">
+
+
+  <div id="replayModal" class="modal">
+    <div class="modal-content">
+      <p>
+        Nice work, you've matched them all!<br> 
+        Would you like to play again?
+      </p>
+      <button class="confirm-btn yes-btn animate-btn" id="yesBtn">Yes</button>
+      <button class="confirm-btn no-btn animate-btn" id="noBtn">No</button>
+    </div>
+  </div>
+
+
+  <div class="row row-01">
+    <div class="col col-01">
+      <div class="tile">
+        <div class="tile-front"></div>
+        <div class="tile-back"></div>
+      </div>
+    </div><!-- end col-01 -->
+    <div class="col col-02">
+      <div class="tile">
+        <div class="tile-front"></div>
+        <div class="tile-back"></div>
+      </div>
+    </div><!-- end col-02 -->
+    <div class="col col-03">
+      <div class="tile">
+        <div class="tile-front"></div>
+        <div class="tile-back"></div>
+      </div>
+    </div><!-- end col-03 -->
+    <div class="col col-04">
+      <div class="tile">
+        <div class="tile-front"></div>
+        <div class="tile-back"></div>
+      </div>
+    </div><!-- end col-04 -->
+  </div><!-- end row-01 -->
+
+  <div class="row row-02">
+    <div class="col col-01">
+      <div class="tile">
+        <div class="tile-front"></div>
+        <div class="tile-back"></div>
+      </div>
+    </div><!-- end col-01 -->
+    <div class="col col-02">
+      <div class="tile">
+        <div class="tile-front"></div>
+        <div class="tile-back"></div>
+      </div>
+    </div><!-- end col-02 -->
+    <div class="col col-03">
+      <div class="tile">
+        <div class="tile-front"></div>
+        <div class="tile-back"></div>
+      </div>
+    </div><!-- end col-03 -->
+    <div class="col col-04">
+      <div class="tile">
+        <div class="tile-front"></div>
+        <div class="tile-back"></div>
+      </div>
+    </div><!-- end col-04 -->
+  </div><!-- end row-02 -->
+
+  <div class="row row-03">
+    <div class="col col-01">
+      <div class="tile">
+        <div class="tile-front"></div>
+        <div class="tile-back"></div>
+      </div>
+    </div><!-- end col-01 -->
+    <div class="col col-02">
+      <div class="tile">
+        <div class="tile-front"></div>
+        <div class="tile-back"></div>
+      </div>
+    </div><!-- end col-02 -->
+    <div class="col col-03">
+      <div class="tile">
+        <div class="tile-front"></div>
+        <div class="tile-back"></div>
+      </div>
+    </div><!-- end col-03 -->
+    <div class="col col-04">
+      <div class="tile">
+        <div class="tile-front"></div>
+        <div class="tile-back"></div>
+      </div>
+    </div><!-- end col-04 -->
+  </div><!-- end row-03 -->
+
+  <div class="row row-04">
+    <div class="col col-01">
+      <div class="tile">
+        <div class="tile-front"></div>
+        <div class="tile-back"></div>
+      </div>
+    </div><!-- end col-01 -->
+    <div class="col col-02">
+      <div class="tile">
+        <div class="tile-front"></div>
+        <div class="tile-back"></div>
+      </div>
+    </div><!-- end col-02 -->
+    <div class="col col-03">
+      <div class="tile">
+        <div class="tile-front"></div>
+        <div class="tile-back"></div>
+      </div>
+    </div><!-- end col-03 -->
+    <div class="col col-04">
+      <div class="tile">
+        <div class="tile-front"></div>
+        <div class="tile-back"></div>
+      </div>
+    </div><!-- end col-04 -->
+  </div><!-- end row-04 -->
+
+</div><!-- end game-board -->
+
+
+
+<div class="creditsModal">
+  <span class="close">&times;</span>
+
+  <h1>Credits</h1>
+  <p>Code modified from <a href="https://github.com/michaelwhyte/match_game">Match Game by Michael Whyte</a> </p><br>
+  <p>Soundtrack: Floating Cities by <a href="https://incompetech.com/music/royalty-free/music.html">Kevin MacLeod (Incompetech)</a></p>
+  <p>(Licensed under Creative Commons: By Attribution 3.0)</p>
+
+</div>
+
+
+
+<footer>
+  <p>&copy; 2017 Grace Tong | <span class="credits">Credits</span></p>
+</footer>
+
+
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"   
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   
+        crossorigin="anonymous"></script>
+<script src="scripts/script.js"></script>
+<script src="https://use.fontawesome.com/3fd6374ec1.js"></script>
+</body>
+</html>

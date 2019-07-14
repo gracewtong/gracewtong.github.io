@@ -1,0 +1,439 @@
+@charset "utf-8";
+
+/* CSS reset styles */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, main, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* box sizing reset */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* responsive image reset */
+img {
+	max-width: 100%;
+}
+
+
+
+/* general styles */
+body {
+	font-family: 'Roboto', sans-serif;
+	display: flex;
+	flex-flow: column;
+	min-height: 100vh;
+}
+
+main {
+	flex: 1;
+	color: #535353;
+	width: 100%;
+	max-width: 1366px;
+	margin: 0 auto;
+}
+
+p {
+	line-height: 1.4;
+}
+
+button, a {
+	cursor: pointer;
+	text-decoration: none;
+}
+
+button {
+	font-family: 'Roboto', sans-serif;
+	font-size: 1rem;
+	color: white;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+ol,ul{
+	line-height: 1.4;
+	margin-top: 0.6rem;
+	margin-left: 2rem;
+}
+
+
+/* header & nav styles */
+header {
+	background: #009cdb;
+	height: 50px;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 5%;
+}
+
+.logo-wrapper {
+	flex: 1;
+}
+
+.logo img {
+	width: 40px;
+	margin: 3px 0 0 1.5%;
+}
+
+.search-btn {
+	background: transparent;
+	border: none;
+	font-size: 1.3rem;
+	padding: 0 16px;
+}
+
+.menu-btn {
+	background: #1281bf;
+	border: none;
+	padding: 8px 16px;
+	height: 50px;
+	font-size: 1.2rem;
+}
+
+.menu-btn:hover,
+.menu-btn:focus {
+	background: #0d6eaa;
+}
+
+
+/* style guide */
+.style-guide {
+	margin: 3% auto;
+	width: 90%;
+}
+
+h1 {
+	padding: 5px 0 20px;
+	font-size: 2.1rem;
+	text-align: center;
+	font-weight: 700;
+}
+
+h3 {
+	font-size: 1.2rem;
+	font-weight: 700;
+	padding-bottom: 20px;
+}
+
+
+
+/* tab styles */
+
+div.tab {
+    background: #efeff0;
+    width: 90%;
+    margin: 0 auto 5%;
+    display: flex;
+}
+
+div.tab button {
+    display: block;
+    background-color: inherit;
+    color: black;
+    padding: 16px 2%;
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+div.tab button:hover {
+    background-color: #d3d4d8;
+}
+
+div.tab button.active {
+    background-color: #d3d4d8;
+}
+
+.tabcontent {
+    float: left;
+    padding: 0 5%;
+    width: 100%;
+    z-index: -10;
+}
+
+.tabcontent h1 {
+	text-align: left;
+}
+
+.tabcontent h2 {
+	font-size: 1.5rem;
+	font-weight: 700;
+	padding-bottom: 20px;
+}
+
+
+/* visual styles */
+
+/* color palette */
+.color-palette {
+	display: flex;
+	margin-bottom: 5%;
+}
+
+.color {
+	width: 33%;
+	height: 100px;
+	font-size: 1.8rem;
+	line-height: 250px;
+}
+
+.main-color {
+	background: #009cdb;
+	color: #1078b6;
+}
+
+.secondary-color {
+	background: #1281bf;
+	color: #139fe5;
+}
+
+.tertiary-color {
+	background: #efeff0;
+}
+
+/* logo */
+.logo-styles img{
+	width: 35%;
+	margin-bottom: 5%;
+}
+
+/* buttons */
+.btn-wrapper {
+	display: flex;
+	flex-flow: column;
+	justify-content: space-between;
+}
+
+.main-btn {
+	background: #009cdb;
+	border: none;
+	width: 80%;
+	height: 100px;
+	margin-bottom: 2%;
+	font-size: 1.5rem;
+	color: white;
+	text-align: center;
+	line-height: 100px;
+}
+
+.main-btn:hover,
+.main-btn:focus {
+	background: #1281bf;
+}
+
+.logout-btn {	
+	height: 70px;
+	line-height: 70px;
+}
+
+.logout-btn {
+	background: #bcbcbc;
+}
+
+.logout-btn:hover,
+.logout-btn:focus {
+	background: #9a9a9a;
+}
+
+/* info boxes */
+.info-box {
+	background: #f2f2f2;
+	margin-top: 5%;
+	width: 100%;
+	height: 500px;
+}
+
+.info-box h1 {
+	padding: 20px;
+	font-size: 1.5rem;
+	text-align: center;
+}
+
+/* fonts */
+#fonts h1,
+#fonts h2,
+#fonts h3 {
+	padding-bottom: 30px;
+}
+
+#fonts h1 {
+	text-align: left;
+	margin-top: 20px;
+}
+
+.paragraph {
+	margin-bottom: 20px;
+}
+
+#fonts a {
+	color: #009cdb;
+	font-weight: 500;
+}
+
+#fonts h3 {
+	font-size: 1.2rem;
+	font-weight: 700;
+	color: #009cdb;
+	padding-bottom: 20px;
+}
+
+/* layouts */
+#layouts {
+	display: flex;
+	flex-flow: row wrap;
+}
+
+#layouts img {
+	width: 31%;
+	margin: 0 1% 1% 0;
+}
+
+/* voice */
+#voice p:nth-of-type(2){
+	font-weight: 700;
+}
+
+
+/* footer styles*/
+footer {
+	background: #009cdb;
+	color: white;
+	margin-top: 10%;
+	padding: 20px 2% 30px;
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.translink-logo {
+	width: 110px;
+	padding-bottom: 10px;
+}
+
+footer p {
+	font-weight: 700;
+}
+
+footer a {
+	color: white;
+	font-size: 0.85rem;
+	line-height: 1.6;
+}
+
+footer a:hover {
+	text-decoration: underline;
+}
+
+.footer-links {
+	display: flex;
+	flex: 0 0 100%;
+	flex-flow: column;
+	align-items: flex-start;
+	margin-top: 15px;
+}
+
+
+
+/* media queries */
+@media screen and (max-width: 800px){
+
+	.logo-styles img {
+	    width: 49%;
+	}
+
+	#layouts img {
+		width: 48%;
+	}
+
+	.main-btn {
+		width: 100%;
+	}
+}
+
+
+@media screen and (max-width: 570px){
+
+	.color-palette {
+		flex-flow: column;
+		width: 100%;
+	}
+
+	.color {
+	    width: 100%;
+	    height: 65px;
+	    font-size: 1.6rem;
+	}
+
+	.info-box {
+		height: 400px;
+	}
+
+	.blue-btn {
+		height: 90px;
+		line-height: 90px;
+	}
+
+}
+
+@media screen and (max-width: 350px){
+	.style-guide {
+		width: 100%;
+	}
+
+	div.tab{
+		width: 95%;
+	}
+
+}
+
+
+

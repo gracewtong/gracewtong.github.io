@@ -1,0 +1,674 @@
+@charset "utf-8";
+
+
+/* CSS reset styles */
+
+@import url('normalize.css');
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, main, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* responsive image reset */
+
+img {
+	max-width: 100%;
+}
+
+
+
+/* general styles */
+
+body {
+	min-width: 740px;
+	overflow-x: hidden;
+}
+
+h1, 
+h2,
+h3, 
+a {
+	font-family: 'Montserrat', sans-serif;
+}
+
+a,
+.submit-btn {
+	text-decoration: none;
+	cursor: pointer;
+	color: #313131;
+}
+
+::selection {
+    color: white;
+    background: #313131;
+}
+
+
+/* navbar styles */
+
+.fixed-nav {
+	width: 100%;
+	min-width: 740px;
+	height: 48px;
+	background-color: white;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 999;	
+}
+
+.nav-logo {
+	margin-left: 60px;
+}
+
+.nav-logo img {
+	padding-top: 14px;
+}
+
+.fixed-nav ul {
+	float: right;	
+	margin-right: 60px;
+}
+
+.fixed-nav li {
+	display: inline;
+}
+
+.fixed-nav li a {
+	float: left;
+	margin-left: 5px;
+	padding: 17px 12px;
+	font-weight: 500;
+	font-size: 14px;
+	letter-spacing: 1px;
+}
+
+.nav-links a:hover {
+	background-color: #313131;
+	color: white;
+}
+
+
+/* fixed booking bubble */
+
+.fixed-bubble {
+	position: fixed;
+	bottom: 4%;
+	right: 1.5%;
+	z-index: 100;
+}
+
+@keyframes bouncy {
+	0%, 50%, 100% {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+	}
+
+	25% {
+		-webkit-transform: translateY(-8px);
+		transform: translateY(-8px);
+	}
+
+	75% {
+		-webkit-transform: translateY(-8px);
+		transform: translateY(-8px);
+	}
+}
+
+.fixed-bubble:hover {
+	animation: bouncy 1s infinite;
+}
+
+
+/* page (section) styles */
+
+section {
+	width: 100%;
+	max-width: 1620px;
+	position: relative;
+	margin: 0 auto;
+	padding: 60px 0;
+	text-align: center;
+}
+
+
+/* clearfix for section */
+
+section:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.content-box {
+	width: 42%;
+	display: inline-block;
+}
+
+.content-box:nth-of-type(odd) {
+	padding-right: 60px;
+}
+
+
+.article-box {
+	width: 34%;
+	margin-top: 3%;
+    vertical-align: top;
+    text-align: left;
+}
+
+
+h2 {
+	font-size: 30px;
+	font-weight: 500;
+	padding-bottom: 17px;
+}
+
+main p {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+	font-weight: 300;
+	line-height: 1.3;
+	padding-bottom: 25px;
+}
+
+.read-more-btn {
+	border: 2px solid #313131;
+	border-radius: 5px;
+	padding: 8px 14px;
+	font-size: 10px;
+	font-weight: 500;
+	background-color: white;
+}
+
+.read-more-btn:hover {
+	box-shadow: 5px 5px 0 0 #313131, 
+					4px 4px 0 0 #313131, 
+					3px 3px 0 0 #313131, 
+					2px 2px 0 0 #313131, 
+					1px 1px 0 0 #313131, 
+					0 0 0 0 #313131;
+}
+
+
+
+/* home page styles */
+
+.title {
+	position: relative;
+	top: 40px;
+	left: 50%;
+	transform: translate(-50%, 0);
+	font-weight: 600;
+	font-size: 77px;
+	text-align: center;
+	letter-spacing: 0.1em;
+}
+
+
+.full-img-wrapper {
+	position: relative;
+	top: 8px;
+	padding: 0 60px;
+	z-index: -10;
+}
+
+.home-pg {
+	padding-bottom: 15px;
+}
+
+
+
+/* tours page styles */
+
+.tour-info-box {
+	width: 25%;
+	display: inline-block;
+	padding: 3% 1%;
+}
+
+.tour-info-box img {
+	max-width: 80%;
+}
+
+.tours-pg h3 {
+	font-size: 20px;
+	padding: 20px 0 20px;
+}
+
+.itinerary-link {
+	font-size: 11px;
+	border-bottom: 1px solid #313131;
+}
+
+.itinerary-link:hover {
+	font-style: italic;
+	
+}
+
+/* booking page styles */
+.booking-pg {
+	padding: 20px 0 45px;
+}
+
+
+
+/* divider styles */
+.divider {
+	max-width: 1620px;
+	margin: 0 auto;
+}
+
+.divider-img {
+	/*width: 100%;*/
+	/*height: 200px;*/
+	height: 400px;
+	margin: 0 60px;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+	filter:brightness(70%) grayscale(90%);
+/*	-webkit-mask-image: url('../images/triangle-border-09.png');
+	-webkit-mask-position: center center;
+	-webkit-mask-repeat: no-repeat;
+	-webkit-mask-size: 48%;*/
+}
+
+.divider-01 {
+	background-image: url(../images/peru-bg-02-cc0.png);
+}
+
+.divider-02 {
+	background-image: url(../images/peru-bg-03-cc0.png);
+}
+
+.divider-03 {
+	background-image: url(../images/peru-bg-04-cc0.png);
+}
+
+.divider-04 {
+	background-image: url(../images/peru-bg-01-cc0.png);
+}
+
+
+
+/* form styles */
+
+form {
+	max-width: 49%;
+	min-width: 625px;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 18px;
+	letter-spacing: 1px;
+	margin: 0 auto;
+}
+
+.form-row {
+	text-align: left;
+	margin: 0 11%;
+}
+
+.form-row span {
+	font-style: italic;
+	font-size: 13px;
+	letter-spacing: 0px;
+}
+
+
+form input,
+form select,
+form textarea {
+	height: 33px;
+	padding: 3px 10px;
+	border-radius: 4px;
+	background-color: white;
+	border: 2px solid #313131;
+	color: #313131;
+	font-weight: 500;
+
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+	outline: none;
+	background-color: #f7f1c9;
+	/*background-color: #dfeee7;*/
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form textarea {
+	width: 100%;
+	box-shadow: 
+				7px 7px 0 0 #313131, 
+				6px 6px 0 0 #313131, 
+				5px 5px 0 0 #313131, 
+				4px 4px 0 0 #313131, 
+				3px 3px 0 0 #313131, 
+				2px 2px 0 0 #313131, 
+				1px 1px 0 0 #313131, 
+				0 0 0 0 #313131;
+}
+
+
+form label {
+	display: block;
+	padding: 26px 0 10px;
+}
+
+
+/* form styles for "select tour" */
+
+form input[type='radio'] {
+	vertical-align: bottom;
+}
+
+.tour-options label {
+	display: inline-block;
+	margin-right: 8px;
+	font-size: 16px;
+	padding-top: 7px;
+}
+
+
+/* form styles for "select date" */
+
+.date-sub-row {
+	display: inline-block;
+}
+
+.select-date label {
+	display: inherit;
+	padding-bottom: 6px;
+	padding-top: 20px;
+}
+
+.select-date select {
+	margin-top: 10px;
+}
+
+
+form textarea {
+	height: 150px;
+	padding: 10px 10px;
+}
+
+/* form styles for "agree to terms" */
+
+form label[for='agree-terms']{
+	display: inline-block;
+}
+
+form input[type='checkbox'] {
+	vertical-align: bottom;
+}
+
+form label a:hover {
+	color: #eb3f52;
+	border-bottom: 2px solid #eb3f52;
+}
+
+
+.submit-btn {
+	margin: 4% 0 7%;
+	border-radius: 4px;
+	padding: 18px 25px;
+	line-height: 0;
+	font-size: 15px;
+	letter-spacing: 1px;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 500;
+	box-shadow: 5px 5px 0 0 #313131, 
+				4px 4px 0 0 #313131, 
+				3px 3px 0 0 #313131, 
+				2px 2px 0 0 #313131, 
+				1px 1px 0 0 #313131, 
+				0 0 0 0 #313131;
+}
+
+.submit-btn:hover {
+	background-color: #f7f1c9;
+}
+
+
+/* form confirmation modal & footer credits modal */
+
+.form-modal,
+.credits-modal {
+	position: fixed; 
+	z-index: 9999; 
+	left: 0;
+	top: 0;
+	width: 100%; 
+	height: 100%; 
+	background-color: rgba(0,0,0,0.7); 
+	display: none;
+}
+
+.form-modal-content,
+.credits-modal-content {
+	position: relative;
+	width: 29%;
+	min-width: 335px;
+    height: 19%;
+    min-height: 159px;
+    margin: 10% auto;
+    padding: 3% 2.5% 2%;
+	background-color: white;
+	border-radius: 6px;
+	box-shadow: 11px 11px 0 0 black, 
+				10px 10px 0 0 black, 
+				9px 9px 0 0 black, 
+				8px 8px 0 0 black, 
+				7px 7px 0 0 black, 
+				6px 6px 0 0 black, 
+				5px 5px 0 0 black, 
+				4px 4px 0 0 black, 
+				3px 3px 0 0 black, 
+				2px 2px 0 0 black, 
+				1px 1px 0 0 black, 
+				0 0 0 0 black;
+}
+
+
+.credits-modal-content {
+	width: 29%;
+}
+
+.form-modal-content h1,
+.credits-modal-content h1 {
+	font-size: 29px;
+	margin-bottom: 18px;
+	line-height: 1.2;
+}
+
+.form-modal-content p,
+.credits-modal-content p {
+	font-size: 17px;
+	line-height: 1.3;
+}
+
+.close {
+    color: #313131;
+    position: absolute;
+    top: 3%;
+    right: 0%;
+    font-size: 39px;
+    line-height: 30px;
+    font-weight: 600;
+    width: 40px;
+    height: 40px;
+}
+
+.close:hover,
+.close:focus {
+    color: #e8656f;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+/* footer styles */
+
+footer {
+	background-color: #313131;
+	height: 120px;
+	z-index: 999;
+	color: #8e8e8e;
+	letter-spacing: 0.7px;
+	padding-left: 60px;
+	padding: 30px 60px;
+}
+
+footer p {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 15px;
+	font-weight: 300;
+	line-height: 1.6;
+}
+
+footer a {
+	color: #8e8e8e;
+}
+
+footer a:hover,
+footer span:hover {
+	color: white;
+	cursor: pointer;
+}
+
+.footer-info p {
+	line-height: 1.6;
+}
+
+.social {
+	float: right;
+	line-height: 2;
+}
+
+.social a {
+	color: #8e8e8e;
+	letter-spacing: 10px;
+}
+
+
+
+/* media queries */
+@media only screen and (max-width: 1080px){
+	.article-box {
+		margin-top: 2%;
+	}
+}
+
+@media only screen and (max-width: 1020px){
+	.article-box {
+		margin-top: 1.5%;
+	}
+}
+
+@media only screen and (max-width: 980px){
+
+	.divider-img {
+		height: 250px;
+	}
+
+	.article-box {
+		margin-top: 0;
+	}
+
+	.content-box:nth-of-type(odd) {
+	    padding-right: 30px;
+	}
+
+	.article-box h2 {
+		font-size: 20px;
+		padding-bottom: 12px;
+		/*padding-top: 1%;*/
+	}
+
+	.article-box p {
+		font-size: 14px;
+		padding-bottom: 19px;
+	}
+
+	.read-more-btn {
+		padding: 6px 10px;
+	}
+
+	.form-modal-content {
+		width: 30%;
+	}
+
+	.form-modal-content h1 {
+		font-size: 25px;
+		margin-bottom: 17px;
+	}
+
+	.form-modal-content p {
+		font-size: 16px;
+		line-height: 1.2;
+	}
+
+	.close {
+	    font-size: 37px;
+	    line-height: 26px;
+	    width: 37px;
+	    height: 37px;
+	}
+}
+
+
+
+
+
+
+

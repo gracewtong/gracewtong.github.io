@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Compass Style Guide</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="styles/styleguide-styles.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+	<link rel="icon" href="favicon.ico">
+</head>
+
+
+<body>
+	
+<header>
+	<div class="logo-wrapper">
+		<a href="#" class="logo">
+			<img src="images/compass-logo.svg" alt="Compass Card Logo">
+		</a>
+	</div>
+	<button class="search-btn"><i class="fa fa-search" aria-hidden="true"></i></button>
+	<button class="menu-btn">Menu</button>
+	
+	<nav>
+		
+	</nav>
+</header>
+
+<main>
+	
+	<h1 class="welcome">Compass Style Guide</h1>
+
+	<section class="style-guide">
+		<div class="tab">
+			<button class="tablinks" onclick="openTab(event, 'visuals')" id="defaultOpen">Visuals</button>
+			<button class="tablinks" onclick="openTab(event, 'fonts')">Fonts</button>		
+			<button class="tablinks" onclick="openTab(event, 'layouts')">Layouts</button>
+			<button class="tablinks" onclick="openTab(event, 'voice')">Voice</button>
+			<button class="tablinks" onclick="openTab(event, 'tone')">Tone</button>
+		</div>
+
+		<div id="visuals" class="tabcontent">
+			<h2>Visual Styles</h2>
+			<h3>Color Palette:</h3>
+			<div class="color-palette">
+				<div class="main-color color">
+					<p>#009cdb</p>
+				</div>
+				<div class="secondary-color color">
+					<p>#1281bf</p>
+				</div>
+				<div class="tertiary-color color">
+					<p>#efeff0</p>
+				</div>
+			</div>
+
+			<h3>Logo:</h3>
+			<div class="logo-styles">
+				<img src="images/compass-logo-bg.svg" alt="Compass Logo on Blue Background">
+				<img src="images/compass-logo-bg-white.svg" alt="Compass Logo on White Background">
+			</div>
+
+			<h3>Buttons:</h3>
+			<div class="btn-wrapper">
+				<a href="#" class="main-btn blue-btn">Main Button</a>
+				<a href="#" class="logout-btn main-btn">Secondary Button</a>
+			</div>
+			<div class="info-box">
+				<h1>Information Box</h1>
+			</div>
+		</div>
+
+		<div id="fonts" class="tabcontent">
+			<h2>Fonts</h2>	
+			<p>Font Family: Roboto</p>
+			<p>Weights: 400, 500, 700</p>
+
+			<h1>Header Level 1: weight 700, 2.1rem</h1>
+			<h2>Header Level 2: weight 700, 1.5rem</h2>
+			<h3>Header Level 3: weight 700, 1.2rem</h3><br>
+
+			<p class="paragraph">This is a paragraph. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, mollitia, animi. Inventore magni adipisci beatae recusandae quam consequuntur.</p>
+			<a href="#">This is a Link.</a>
+
+		</div>
+
+		<div id="layouts" class="tabcontent">
+			<h2>Layouts</h2>
+			<img src="images/wireframe-main.png" alt="wireframe of mobile main page">
+			<img src="images/wireframe-login.png" alt="wireframe of mobile login page">
+			<img src="images/wireframe-balance.png" alt="wireframe of mobile vibalance page">
+			<img src="images/wireframe-reload.png" alt="wireframe of mobile reloading page">
+			<img src="images/wireframe-success.png" alt="wirefram of mobile reload success page">
+		</div>
+
+		<div id="voice" class="tabcontent">
+			<h2>Voice</h2>
+			<p>Our voice is straightforward and professional without being too wordy or overly complex.
+			The main priority and goal of our target demographics are people only go on the website to perform a specific task and find specific information about the Compass card and/or services. We want to make things easy to understand for the even the least tech-savvy person, as the target users come from a wide range of demographics. Information and processes should be worded in an easily digestible way and not bore the user with too many convoluted details and descriptions.</p><br>
+
+			<p>Compass' voice is:</p>
+			<ul>
+				<li>Informative but not boring or dry</li>
+				<li>Helpful but not patronizing</li>
+				<li>Friendly but not overly emotional or casual</li>
+				<li>Smart but not pretentious</li>
+			</ul>
+
+		</div>
+
+		<div id="tone" class="tabcontent">
+			<h2>Tone</h2>
+			<p>It is important to consistently maintain a professional, yet friendly tone that does not get monotonous or overly complicated. Use language that will express a level of authority and knowledge to the user, but avoid “talking down” to them.</p><br>
+			<p>People that use the Compass website come from a wide range of demographics, so to avoid confusion and any potential linguistic issues, refrain from using any slang (especially words and phrases that only select demographics will understand).</p>
+		</div>
+	</section>
+
+
+
+</main>
+
+<footer>
+	<img src="images/translink-logo.svg" class="translink-logo" alt="Translink Logo">
+	<p>1-888-207-4055</p>
+	<div class="footer-links">
+		<a href="#">Contact Us</a>
+		<a href="#">Compass Privacy Policy</a>
+		<a href="#">Compass Terms and Conditions</a>
+	</div>
+</footer>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="scripts/scripts.js"></script>
+<script src="https://use.fontawesome.com/3fd6374ec1.js"></script>
+</body>
+</html>
