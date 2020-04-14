@@ -1,0 +1,319 @@
+@charset "utf-8";
+
+/* CSS reset styles */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, main, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* box sizing reset */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* responsive image reset */
+img {
+	max-width: 100%;
+}
+
+
+
+/* general styles */
+body {
+	font-family: 'Roboto', sans-serif;
+	display: flex;
+	flex-flow: column;
+	min-height: 100vh;
+	max-width: 600px;
+	/*margin: 0 auto;*/
+}
+
+main {
+	flex: 1;
+	margin: 0 5%;
+	color: #535353;
+}
+
+button, a {
+	cursor: pointer;
+	text-decoration: none;
+}
+
+p {
+	line-height: 1.4;
+}
+
+button {
+	font-family: 'Roboto', sans-serif;
+	font-size: 1rem;
+	color: white;
+}
+
+
+/* header & nav styles */
+header {
+	background: #009cdb;
+	height: 50px;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 5%;
+}
+
+.logo-wrapper {
+	flex: 1;
+}
+
+.logo img {
+	width: 40px;
+	margin: 3px 0 0 3%;
+}
+
+.search-btn {
+	background: transparent;
+	border: none;
+	font-size: 1.3rem;
+	padding: 0 16px;
+}
+
+.menu-btn {
+	background: #1281bf;
+	border: none;
+	padding: 8px 16px;
+	height: 50px;
+	font-size: 1.2rem;
+}
+
+.menu-btn:hover,
+.menu-btn:focus {
+	background: #0d6eaa;
+}
+
+
+/* main page styles */
+
+.btn-wrapper {
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.main-btn {
+	background: #009cdb;
+	border: none;
+	width: 90%;
+	height: 100px;
+	margin-bottom: 2%;
+	font-size: 1.5rem;
+	color: white;
+	text-align: center;
+	line-height: 100px;
+}
+
+.main-btn:hover,
+.main-btn:focus {
+	background: #1281bf;
+}
+
+.compass-basics {
+	background: #efeff0;
+	margin-top: 10%;
+	height: 500px;
+}
+
+h1 {
+	padding: 20px;
+	font-size: 1.5rem;
+	text-align: center;
+	font-weight: 700;
+}
+
+/* login page styles */
+.form {
+	position: relative;
+	z-index: 1;
+	max-width: 360px;
+	background: #efeff0;
+	margin: 0 auto 40px;
+	padding: 45px;
+	text-align: center;
+}
+
+.form input {	
+	font-family: "Roboto", sans-serif;
+	background: white;
+	width: 100%;
+	border: 0;
+	margin: 0 0 15px;
+	padding: 15px;
+	box-sizing: border-box;
+	font-size: 14px;
+}
+
+.form input:focus {
+	outline: 2px solid lightgrey;
+}
+
+.form button {
+	text-transform: uppercase;
+	background: #009cdb;
+	width: 100%;
+	border: 0;
+	padding: 15px;
+	font-size: 14px;
+	transition: all 0.3 ease;
+	cursor: pointer;
+}
+
+.form button:hover,.form button:active,.form button:focus {
+	background: #0f78a8;
+}
+
+.form .message {
+	margin: 15px 0 0;
+	color: #b3b3b3;
+	font-size: 12px;
+}
+
+.form .message a {
+	color: #009cdb;
+	text-decoration: none;
+}
+
+.form .register-form {
+	display: none;
+}
+
+
+/* balance page styles */
+.balance-page {
+	text-align: center;
+}
+
+.amt-balance {
+	font-size: 3.7rem;
+	padding: 1%;
+}
+
+.account-type {
+	font-size: 1.2rem;
+}
+
+.expiry-date {
+	margin-top: 1%;
+	color: #e03e26;
+}
+
+.balance-page .btn-wrapper,
+.success-page .btn-wrapper {
+	margin-top: 15%;
+}
+
+.balance-page .load-btn,
+.success-page .load-btn,
+.logout-btn {	
+	height: 70px;
+	line-height: 70px;
+}
+
+.logout-btn {
+	background: #bcbcbc;
+}
+
+.logout-btn:hover,
+.logout-btn:focus {
+	background: #9a9a9a;
+}
+
+
+
+/* footer styles*/
+footer {
+	background: #009cdb;
+	color: white;
+	margin-top: 10%;
+	padding: 5% 3% 8%;	
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.translink-logo {
+	width: 110px;
+	padding-bottom: 10px;
+}
+
+footer p {
+	font-weight: 700;
+}
+
+footer a {
+	color: white;
+	font-size: 0.85rem;
+	line-height: 1.6;
+}
+
+footer a:hover {
+	text-decoration: underline;
+}
+
+.footer-links {
+	display: flex;
+	flex: 0 0 100%;
+	flex-flow: column;
+	align-items: flex-start;
+	margin-top: 15px;
+}
+
+
+
+
+
+
+
+
